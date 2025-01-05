@@ -1,6 +1,6 @@
 namespace UrlShortenerContainerized.Models;
 
-public class LinkResultModel
+public record LinkResultModel
 {
-    public string? Url { get; set; }
+    public string? Url { get; init; }
 }

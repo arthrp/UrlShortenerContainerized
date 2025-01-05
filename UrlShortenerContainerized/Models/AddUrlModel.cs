@@ -1,6 +1,6 @@
 namespace UrlShortenerContainerized.Models;
 
-public class AddUrlModel
+public record AddUrlModel
 {
     public string FullUrl { get; set; } = "";
 }
