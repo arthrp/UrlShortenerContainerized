@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortenerContainerized", "UrlShortenerContainerized\UrlShortenerContainerized.csproj", "{740A35D9-F3E8-4866-A998-CA78D5797451}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortenerContainerized.Tests", "UrlShortenerContainerized.Tests\UrlShortenerContainerized.Tests.csproj", "{BB1A9243-972F-455C-AC69-892F38938F53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{740A35D9-F3E8-4866-A998-CA78D5797451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{740A35D9-F3E8-4866-A998-CA78D5797451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{740A35D9-F3E8-4866-A998-CA78D5797451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1A9243-972F-455C-AC69-892F38938F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1A9243-972F-455C-AC69-892F38938F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1A9243-972F-455C-AC69-892F38938F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1A9243-972F-455C-AC69-892F38938F53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
