@@ -1,0 +1,23 @@
+﻿@model LinkResultModel?
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="content-container">
+    <div class="central-box">
+        @if (string.IsNullOrEmpty(Model?.Url))
+        {
+            <form asp-controller="Home" asp-action="AddUrl" method="POST">
+                <label for="fullUrl" class="form-label mb-2">Paste the URL</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="fullUrl" name="fullUrl" placeholder="Enter URL here" required>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        }
+        else
+        {
+            @Html.Partial("_LinkResult", Model)
+        }
+    </div>
+</div>

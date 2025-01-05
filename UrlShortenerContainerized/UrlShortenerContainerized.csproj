@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+      <UserSecretsId>67475488-fb11-4a29-aaff-99eef21c05f2</UserSecretsId>
+  </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="StackExchange.Redis" Version="2.8.24" />
+    </ItemGroup>
+
+</Project>
