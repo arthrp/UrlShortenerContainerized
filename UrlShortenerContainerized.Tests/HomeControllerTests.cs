@@ -16,7 +16,7 @@ namespace UrlShortenerContainerized.Tests;
 public class HomeControllerTests
 {
     [Test]
-    public async Task AddUrl_Works()
+    public void AddUrl_Works()
     {
         //Arrange
         var logger = A.Fake<ILogger<HomeController>>();
@@ -62,5 +62,26 @@ public class HomeControllerTests
 
         var model = (result as ViewResult)!.Model as LinkResultModel;
         Assert.That(model!.Url, Does.StartWith("http://localhost"));
+    }
+
+    [Test]
+    public void RedirectTo_Works()
+    {
+        //Arrange
+        var logger = A.Fake<ILogger<HomeController>>();
+        const string key = "00000000000000000000000000000001";
+        const string url = "https://www.redhat.com/en";
+        
+        var repo = A.Fake<IUrlRepository>();
+        A.CallTo(() => repo.Get(key)).Returns(url);
+
+        var controller = new HomeController(logger, repo);
+        var result = controller.RedirectTo(key);
+        
+        Assert.That(result, Is.Not.Null);
+        Assert.That(result, Is.TypeOf<RedirectResult>());
+
+        var redirectResult = result as RedirectResult;
+        Assert.That(redirectResult!.Url, Is.EqualTo(url));
     }
 }
