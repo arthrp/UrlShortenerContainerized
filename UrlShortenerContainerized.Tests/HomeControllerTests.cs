@@ -76,8 +76,11 @@ public class HomeControllerTests
         A.CallTo(() => repo.Get(key)).Returns(url);
 
         var controller = new HomeController(logger, repo);
+        
+        //Act
         var result = controller.RedirectTo(key);
         
+        //Assert
         Assert.That(result, Is.Not.Null);
         Assert.That(result, Is.TypeOf<RedirectResult>());
 
